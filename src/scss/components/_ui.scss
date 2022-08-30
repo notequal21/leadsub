@@ -1,0 +1,21 @@
+.btn {
+  background: linear-gradient(93.76deg, #0568FF -27.36%, #31A0FD 121.33%);
+  box-shadow: 0.3125rem 0.3125rem 1.875rem rgba(84, 157, 241, 0.25);
+  border-radius: 0.857rem;
+  padding: 0 1.785rem;
+  height: 2.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.214rem;
+  color: #FFFFFF;
+
+  transition: all .3s ease;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}

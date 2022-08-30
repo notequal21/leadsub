@@ -1,0 +1,251 @@
+.main {
+  // margin: 10.57rem 0 7.5rem;
+  // padding: 0 0 7.5px;
+  position: relative;
+
+  padding: 10.57rem 0 7.5rem;
+  height: 100vh;
+
+  @media (max-width:1200px) {
+    height: unset;
+  }
+
+  @media (max-width:767px) {
+    margin: 7rem 0 7rem;
+  }
+
+  .container {
+    position: relative;
+  }
+
+  &-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    pointer-events: none;
+
+    &__circle {
+      position: absolute;
+      top: -11rem;
+      left: 0;
+      width: 57.15rem;
+
+      @media (max-width:1500px) {
+        width: 47.15rem;
+      }
+
+      @media (max-width:767px) {
+        display: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  &-body {
+    position: relative;
+    z-index: 1;
+    display: flex;
+
+    @media (max-width:1200px) {
+      flex-direction: column;
+    }
+
+    &__col {
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width:1200px) {
+        align-items: flex-start;
+      }
+
+      &_left {
+        flex: 0 1 100%;
+
+        @media (max-width:1200px) {
+          max-width: 40rem;
+        }
+
+        @media (max-width:767px) {
+          width: 100%;
+          margin: 0 auto 0;
+        }
+      }
+
+      &_right {
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 45rem;
+        margin: 0 0 0 7.15rem;
+
+        @media (max-width:1500px) {
+          max-width: 40rem;
+        }
+
+        @media (max-width:1200px) {
+          margin: 5rem auto 0;
+        }
+
+        @media (max-width:767px) {
+          margin: 2rem auto 0;
+        }
+      }
+    }
+
+    &__title {
+      font-weight: 700;
+      font-size: 2.285rem;
+      line-height: 2.786rem;
+      letter-spacing: 0.03rem;
+      color: #222431;
+      max-width: 32.1428rem;
+
+      @media (max-width:1500px) {
+        font-size: 2rem;
+      }
+    }
+
+    &__subtitle {
+      margin: 0.5625rem 0 0;
+      max-width: 31rem;
+
+      font-weight: 500;
+      font-size: 1.125rem;
+      line-height: 1.375rem;
+      letter-spacing: 0.03rem;
+      color: #222431;
+    }
+
+    &__img {
+      height: calc(100vh - 330px);
+      padding: 0 0 0 7.75rem;
+
+      @media (max-width:1500px) {
+        padding: 0;
+      }
+
+      @media (max-width:767px) {
+        display: none;
+      }
+
+      // position: relative;
+      // padding: 0 0 70.5% 7.75rem;
+      // padding: 0 0 70.5% 0;
+
+      // img {
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   width: 100%;
+      //   height: 100%;
+      // }
+
+      img {
+        width: 100%;
+        max-width: 56.33rem;
+        height: 100%;
+        max-height: 50rem;
+        object-fit: contain;
+        object-position: center;
+
+        @media (max-width:1500px) {
+          max-width: 36.33rem;
+          max-height: 30rem;
+        }
+      }
+    }
+  }
+
+  &-account {
+
+    &__btns {
+      margin: 3.5714rem 0 0;
+      display: flex;
+
+      @media (max-width:767px) {
+        flex-direction: column;
+        margin: 2rem 0 0;
+      }
+    }
+
+    &__link {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 2.1428rem;
+      letter-spacing: 0.03rem;
+      color: #1C85FE;
+
+      &:not(:first-child) {
+        margin: 0 0 0 7.1428rem;
+
+        @media (max-width:767px) {
+          margin: 0.5rem 0 0;
+        }
+      }
+    }
+
+    &__title {
+      font-size: 1.1428rem;
+      line-height: 2.43rem;
+      letter-spacing: 0.03rem;
+      color: #222431;
+    }
+
+    &__content {
+      margin: 2.8571rem 0 0;
+
+      @media (max-width:767px) {
+        margin: 2rem 0 0;
+      }
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      @media (max-width:450px) {
+        flex-wrap: wrap;
+      }
+
+      &-ico {
+        flex: 0 0 auto;
+        width: 3.5714rem;
+        height: 3.5714rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
+
+      &-name {
+        margin: 0 0 0 2.1428rem;
+        font-weight: 600;
+        font-size: 1.1428rem;
+        line-height: 1.4285rem;
+        color: #222431;
+      }
+
+      &-link {
+        margin: 0 0 0 auto;
+
+        @media (max-width:450px) {
+          flex: 0 0 100%;
+          margin: 1rem 0 0;
+        }
+      }
+    }
+  }
+}

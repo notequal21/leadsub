@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      @@include('components/index/header.html')
+
+      <section class="main">
+        <div class="container">
+          <div class="main-bg">
+            <div class="main-bg__circle">
+              <img src="./img/index/circle.svg" alt="">
+            </div>
+          </div>
+          <div class="main-body">
+            <div class="main-body__col main-body__col_left">
+              <h1 class="main-body__title">
+                Выберите свой любимый бот и вперед!
+              </h1>
+              <h2 class="main-body__subtitle">
+                Просто выполните пошаговую инструкцию для подключения существующего бота Telegram.
+              </h2>
+              <div class="main-body__img">
+                <img src="./img/index/image.svg" alt="">
+              </div>
+            </div>
+            <div class="main-body__col main-body__col_right">
+              <div class="main-account">
+                <div class="main-account__title">
+                  В LeadSub существует другой аккаунт, связанный с этим токеном бота
+                </div>
+                <div class="main-account__content">
+                  <div class="main-account__item">
+                    <div class="main-account__item-ico">
+                      <img src="./img/icons/person.svg" alt="">
+                    </div>
+                    <div class="main-account__item-name">
+                      PDL
+                    </div>
+                    <a href="" class="main-account__item-link btn">
+                      Перейти к аккаунту
+                    </a>
+                  </div>
+                </div>
+                <div class="main-account__btns">
+                  <a href="" class="main-account__link">
+                    Подключить существующий бот
+                  </a>
+                  <a href="" class="main-account__link">
+                    Создать новый бот
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+    @@include('components/index/footer.html')
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+// -------- imports --------
+@import "fonts";
+@import "components/_fonts";
+@import "components/_normalize.scss";
+@import "components/_mixins.scss";
+@import "components/_variables.scss";
+@import "components/_variables.scss";
+@import "components/_header.scss";
+@import "components/_footer.scss";
+@import "components/_ui.scss";
+@import "pages/index/_main.scss";
+@import "pages/connect/_main.scss";
+
+// fonts --------- &display=swap || &subset=cyrillic-ext
+// throught plugin
+
+
+::selection {}
+
+body {
+  overflow: auto;
+
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.container {
+  max-width: 137.142rem;
+  margin: 0 auto;
+  padding: 0 7.142rem;
+
+  @media (max-width:767px) {
+    padding: 0 1.5rem;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.content {
+  flex: 1 1 auto;
+}

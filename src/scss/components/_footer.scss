@@ -1,0 +1,31 @@
+.footer {
+
+  &_index {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0 5rem;
+
+    @media (max-width:767px) {
+      padding: 1rem 0 3rem;
+    }
+
+    .footer-body {
+      display: flex;
+      align-items: center;
+
+      &__back {
+        font-size: 1.2857rem;
+        line-height: 1.5714rem;
+        letter-spacing: 0.03rem;
+        color: #717171;
+
+        &::before {
+          content: url(../img/icons/arrow-back.svg);
+          margin: 0 .7142rem 0 0;
+        }
+      }
+    }
+  }
+}
