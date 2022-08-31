@@ -120,6 +120,7 @@ h6 {
 .header_index {
   margin-top: 2.5rem;
   position: absolute;
+  z-index: 10;
   width: 100%;
   left: 0;
   top: 0;
@@ -342,7 +343,7 @@ h6 {
 .connect__image {
   width: 60%;
   min-height: 100vh;
-  padding: 10.57rem 0 7.5rem;
+  padding: 7rem 0 7.5rem;
   background-color: #A3CFFF;
   position: relative;
 }
@@ -357,6 +358,13 @@ h6 {
   left: 0;
   bottom: 0;
   pointer-events: none;
+}
+
+.connect__image-bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .connect__image-item {
@@ -545,7 +553,7 @@ body {
 
 @media (min-width: 768px) {
   .connect__image {
-    padding: 7rem 0 7rem;
+    padding: 10.57rem 0 7.5rem;
   }
 
   .connect__content {
@@ -556,6 +564,93 @@ body {
 @media (min-width: 1201px) {
   .connect {
     display: flex;
+  }
+}
+
+@media (max-width: 1800px) {
+  .connect-body__warn-text br {
+    display: none;
+  }
+
+  .connect-instr__list-item .text br {
+    display: none;
+  }
+}
+
+@media (max-width: 1600px) {
+  .connect__image-bg {
+    width: 34rem;
+  }
+
+  .connect__image-title {
+    font-size: 2rem;
+  }
+
+  .connect__content .container {
+    padding: 0 4rem;
+  }
+
+  .connect-body__title {
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+
+  .connect-body__warn {
+    padding: 1.142rem 2rem 1.142rem 4.5rem;
+    margin: 1.2rem 0 0;
+  }
+
+  .connect-body__warn-text {
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+
+  .connect-instr {
+    margin: 1.2rem 0 0;
+  }
+
+  .connect-instr__title {
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+
+  .connect-instr__list-item {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+  }
+
+  .connect-instr__list-item:first-child {
+    margin: 1.35rem 0 0;
+  }
+
+  .connect-instr__list-item:not(:first-child) {
+    margin: 1.2rem 0 0;
+  }
+
+  .connect-instr__list-item .num {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 1rem 0 0;
+  }
+
+  .connect-form {
+    margin: 1.5rem 0 0;
+  }
+
+  .connect-form__title {
+    font-size: 1.15rem;
+    line-height: 1.3rem;
+  }
+
+  .connect-form__input {
+    margin: 0.514rem 0 0;
+    height: 3rem;
+  }
+
+  .connect-form__btn {
+    height: 3rem;
+    font-size: 1.15rem;
+    line-height: 1.3rem;
   }
 }
 
@@ -579,10 +674,6 @@ body {
   .main-body__img img {
     max-width: 36.33rem;
     max-height: 30rem;
-  }
-
-  .connect__image-title {
-    font-size: 2rem;
   }
 }
 
@@ -608,7 +699,7 @@ body {
   }
 
   .connect {
-    margin: 0 0 7rem;
+    margin: 0 0 8rem;
   }
 
   .connect__image {
@@ -631,14 +722,6 @@ body {
 
   .connect-body__warn {
     padding: 1.142rem 1rem 1.142rem 3.7rem;
-  }
-
-  .connect-body__warn-text br {
-    display: none;
-  }
-
-  .connect-instr__list-item .text br {
-    display: none;
   }
 }
 
@@ -681,6 +764,10 @@ body {
     margin: 2rem 0 0;
   }
 
+  .connect {
+    margin: 0 0 7rem;
+  }
+
   .container {
     padding: 0 1.5rem;
   }
@@ -694,5 +781,11 @@ body {
   .main-account__item-link {
     flex: 0 0 100%;
     margin: 1rem 0 0;
+  }
+}
+
+@media (max-height: 900px) {
+  .connect__image-bg {
+    width: 34rem;
   }
 }
