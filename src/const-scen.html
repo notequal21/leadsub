@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="content-main">
+        @@include('components/aside.html')
+        @@include('components/scen-addnew.html')
+
+        <main class="content-container">
+          @@include('components/header.html', {
+            title: 'Конструктор',
+            scen: 'active'
+          })
+          <div class="content-container__inner">
+            <div class="content-controlls">
+              <div class="content-controlls__all">
+                <span class="fake"></span>
+                <div class="text">
+                  Выбрать всё
+                </div>
+                <!-- <label>
+                  <input type="checkbox">
+                </label> -->
+              </div>
+              <div class="content-controlls__count">
+                4 Выбранные
+              </div>
+              <div class="content-controlls__actions">
+                <button class="content-controlls__actions-btn btn btn_light">
+                  Массовые действия
+                </button>
+                <div class="content-controlls__actions-list">
+                  <button class="content-controlls__actions-item btn btn_light">
+                    <img src="./img/icons/trash.svg" alt="">
+                    Удалить
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="scenarious">
+              <div class="scenarious-body">
+                <div class="scenarious-item">
+                  <div class="scenarious-item__img">
+                    <img src="./img/connect/scen01.png" alt="">
+                  </div>
+                  <div class="scenarious-item__bottom">
+                    <div class="scenarious-item__check">
+                      <!-- <label>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label> -->
+                      <span class="fake"></span>
+                    </div>
+                    <div class="scenarious-item__name">
+                      <span></span>
+                      Test_Bot
+                    </div>
+                    <div class="scenarious-item__menu">
+                      <button class="scenarious-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor"/>
+                        </svg>                      
+                      </button> 
+                      <div class="scenarious-item__menu-list">
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/edit.svg" alt="">
+                          Переименовать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/copy.svg" alt="">
+                          Дублировать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenarious-item">
+                  <div class="scenarious-item__img">
+                    <img src="./img/connect/scen01.png" alt="">
+                  </div>
+                  <div class="scenarious-item__bottom">
+                    <div class="scenarious-item__check">
+                      <!-- <label>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label> -->
+                      <span class="fake"></span>
+                    </div>
+                    <div class="scenarious-item__name">
+                      <span></span>
+                      Test_Bot
+                    </div>
+                    <div class="scenarious-item__menu">
+                      <button class="scenarious-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor"/>
+                        </svg>                      
+                      </button> 
+                      <div class="scenarious-item__menu-list">
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/edit.svg" alt="">
+                          Переименовать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/copy.svg" alt="">
+                          Дублировать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenarious-item">
+                  <div class="scenarious-item__img">
+                    <img src="./img/connect/scen01.png" alt="">
+                  </div>
+                  <div class="scenarious-item__bottom">
+                    <div class="scenarious-item__check">
+                      <!-- <label>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label> -->
+                      <span class="fake"></span>
+                    </div>
+                    <div class="scenarious-item__name">
+                      Test_Bot
+                    </div>
+                    <div class="scenarious-item__menu">
+                      <button class="scenarious-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor"/>
+                        </svg>                      
+                      </button> 
+                      <div class="scenarious-item__menu-list">
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/edit.svg" alt="">
+                          Переименовать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/copy.svg" alt="">
+                          Дублировать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="scenarious-item">
+                  <div class="scenarious-item__img">
+                    <img src="./img/connect/scen01.png" alt="">
+                  </div>
+                  <div class="scenarious-item__bottom">
+                    <div class="scenarious-item__check">
+                      <!-- <label>
+                        <input type="checkbox">
+                        <span class="fake"></span>
+                      </label> -->
+                      <span class="fake"></span>
+                    </div>
+                    <div class="scenarious-item__name">
+                      Test_Bot
+                    </div>
+                    <div class="scenarious-item__menu">
+                      <button class="scenarious-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor"/>
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor"/>
+                        </svg>                      
+                      </button> 
+                      <div class="scenarious-item__menu-list">
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/edit.svg" alt="">
+                          Переименовать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/copy.svg" alt="">
+                          Дублировать
+                        </button>
+                        <button class="scenarious-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

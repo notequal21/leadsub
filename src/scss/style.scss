@@ -5,11 +5,14 @@
 @import "components/_mixins.scss";
 @import "components/_variables.scss";
 @import "components/_variables.scss";
+@import "components/_ui.scss";
 @import "components/_header.scss";
 @import "components/_footer.scss";
-@import "components/_ui.scss";
+@import "components/_addnew.scss";
+@import "components/_aside.scss";
 @import "pages/index/_main.scss";
 @import "pages/connect/_main.scss";
+@import "pages/construction/_scenarious.scss";
 
 // fonts --------- &display=swap || &subset=cyrillic-ext
 // throught plugin
@@ -44,4 +47,144 @@ body {
 
 .content {
   flex: 1 1 auto;
+
+  &-main {
+    display: flex;
+    height: 100vh;
+  }
+
+  &-container {
+    width: 100%;
+
+    &__inner {
+      background: #FFFFFF;
+      padding: 0 2.85rem 0 0;
+
+      @media (max-width:767px) {
+        padding: 0 1.2rem 0 3rem;
+      }
+    }
+  }
+
+  &-controlls {
+    margin: 2.142rem 0 0 3.142rem;
+    display: flex;
+    align-items: center;
+
+    @media (max-width:767px) {
+      flex-direction: column-reverse;
+      margin: 1rem 0 0 3.142rem;
+    }
+
+    &__all {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &.checked {
+        .fake {
+          border: .1428rem solid #1C85FE;
+          background: #1C85FE;
+
+          &::after {
+            display: block;
+          }
+        }
+      }
+
+      label {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+
+      input {
+        display: none;
+
+        &:checked {
+          &+.fake {
+            border: .1428rem solid #1C85FE;
+            background: #1C85FE;
+
+            &::after {
+              display: block;
+            }
+          }
+        }
+      }
+
+      .fake {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.5714rem;
+        height: 1.5714rem;
+        border-radius: .4285rem;
+        border: .1428rem solid #BEBEBE;
+
+
+        &::after {
+          content: url(../img/icons/check.svg);
+          width: 1rem;
+          height: 1rem;
+          display: none;
+        }
+      }
+
+      .text {
+        font-size: 1rem;
+        line-height: 1.428rem;
+        color: #1C85FE;
+        margin: 0 0 0 1.285rem;
+      }
+    }
+
+    &__count {
+      margin: 0 0 0 auto;
+      font-size: 1rem;
+      line-height: 1.1428rem;
+      color: #222431;
+
+      @media (max-width:767px) {
+        margin: .75rem 0;
+      }
+    }
+
+    &__actions {
+      position: relative;
+      margin: 0 0 0 2.1428rem;
+
+      @media (max-width:767px) {
+        margin: 0;
+      }
+
+      &-list {
+        padding: 5px 0 0;
+        position: absolute;
+        width: 100%;
+        display: none;
+
+        &.show {
+          display: block;
+        }
+      }
+
+      &-item {
+        justify-content: flex-start;
+        width: 100%;
+        background: #EFF1F8;
+
+        img {
+          margin: 0 .714rem 0 0;
+        }
+      }
+
+      &-btn {
+
+        @media (max-width:767px) {
+          height: 2.4rem;
+        }
+      }
+    }
+  }
 }

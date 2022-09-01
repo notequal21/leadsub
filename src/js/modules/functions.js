@@ -189,3 +189,226 @@ export const upBtn = () => {
     }
   });
 }
+
+export const dropdownMenu = () => {
+  if (document.querySelector('.dropdown-btn')) {
+    const dropdownBtn = document.querySelector('.dropdown-btn')
+    const dropdown = document.querySelector('.aside-menu__item_dropdown')
+    const dropdownContent = document.querySelector('.aside-menu__dropdown')
+    dropdownBtn.addEventListener('click', () => {
+      if (dropdown.classList.contains('active')) {
+        dropdown.classList.remove('active')
+      } else {
+        dropdown.classList.add('active')
+      }
+    })
+  }
+}
+
+export const actionsShow = () => {
+  if (document.querySelector('.dropdown-btn')) {
+    const actionsBtn = document.querySelector('.content-controlls__actions-btn')
+    const actionsList = document.querySelector('.content-controlls__actions-list')
+    actionsBtn.addEventListener('click', () => {
+      if (actionsList.classList.contains('show')) {
+        actionsList.classList.remove('show')
+      } else {
+        actionsList.classList.add('show')
+      }
+    })
+  }
+}
+
+export const scenMenuShow = () => {
+  if (document.querySelector('.scenarious-item__menu-btn')) {
+    const scenMenuBtns = document.querySelectorAll('.scenarious-item__menu-btn')
+    const scenMenuList = document.querySelectorAll('.scenarious-item__menu')
+    scenMenuBtns.forEach(item => {
+      item.addEventListener('click', (event) => {
+
+        const ev = window.event || event;
+        const path = event.path || (event.composedPath && event.composedPath());
+
+        if (path[1].classList.contains('scenarious-item__menu')) {
+          if (path[1].classList.contains('open')) {
+            path[1].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[1].classList.add('open')
+          }
+        }
+        if (path[2].classList.contains('scenarious-item__menu')) {
+          if (path[2].classList.contains('open')) {
+            path[2].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[2].classList.add('open')
+          }
+        }
+        if (path[3].classList.contains('scenarious-item__menu')) {
+          if (path[3].classList.contains('open')) {
+            path[3].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[3].classList.add('open')
+          }
+        }
+      })
+    })
+  }
+}
+
+export const profileToggle = () => {
+  if (document.querySelector('.aside-profile')) {
+    const profileBtn = document.querySelector('.aside-profile')
+    const asideMenu = document.querySelector('.aside-menu')
+    const profileManager = document.querySelector('.profile-manager')
+    profileBtn.addEventListener('click', () => {
+      if (profileBtn.classList.contains('active')) {
+        profileBtn.classList.remove('active')
+        profileManager.classList.remove('active')
+        asideMenu.classList.remove('hide')
+      } else {
+        profileBtn.classList.add('active')
+        profileManager.classList.add('active')
+        asideMenu.classList.add('hide')
+      }
+    })
+  }
+}
+
+export const asideToggle = () => {
+  if (document.querySelector('.aside')) {
+    const asideBtn = document.querySelector('.aside__toggle')
+    const aside = document.querySelector('.aside')
+
+    asideBtn.addEventListener('click', () => {
+      if (aside.classList.contains('mini')) {
+        aside.classList.remove('mini')
+        asideBtn.classList.remove('active')
+      } else {
+        aside.classList.add('mini')
+        asideBtn.classList.add('active')
+      }
+    })
+
+    if (window.innerWidth <= 767) {
+      aside.classList.add('mini')
+      asideBtn.classList.add('active')
+    }
+    window.addEventListener('resize', () => {
+      aside.classList.add('mini')
+      asideBtn.classList.add('active')
+    })
+
+  }
+}
+
+export const scenAddNew = () => {
+  if (document.querySelector('.scenarious-item__menu-btn')) {
+    const scenAddNewBtn = document.querySelector('.header__add')
+    const scenAddNewBtnClose = document.querySelector('.addnew-body__btns-cancel')
+    const addnew = document.querySelector('.addnew')
+    scenAddNewBtn.addEventListener('click', () => {
+      if (addnew.classList.contains('show')) {
+        addnew.classList.remove('show')
+      } else {
+        addnew.classList.add('show')
+      }
+    })
+    scenAddNewBtnClose.addEventListener('click', () => {
+      if (addnew.classList.contains('show')) {
+        addnew.classList.remove('show')
+      } else {
+        addnew.classList.add('show')
+      }
+    })
+  }
+}
+
+
+export const selectItem = () => {
+  if (document.querySelector('.scenarious-item')) {
+    const items = document.querySelectorAll('.scenarious-item')
+    const checkboxes = document.querySelectorAll('.scenarious-item__check')
+    const selectAll = document.querySelector('.content-controlls__all')
+    checkboxes.forEach(item => {
+      item.addEventListener('click', (event) => {
+
+        // if (!("path" in Event.prototype))
+        //   Object.defineProperty(Event.prototype, "path", {
+        //     get: function () {
+        //       var path = [];
+        //       var currentElem = this.target;
+        //       while (currentElem) {
+        //         path.push(currentElem);
+        //         currentElem = currentElem.parentElement;
+        //       }
+        //       if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
+        //         path.push(document);
+        //       if (path.indexOf(window) === -1)
+        //         path.push(window);
+        //       return path;
+        //     }
+        //   });
+
+        // console.log(e);
+
+        const ev = window.event || event;
+        const path = event.path || (event.composedPath && event.composedPath());
+
+        if (path[3].classList.contains('checked')) {
+          path[3].classList.remove('checked')
+          // if (path[3].classList.contains('checked')) {
+          // path[3].classList.remove('checked')
+          // e.path[0].classList.remove('checked')
+          // item.classList.remove('checked')
+        } else {
+          path[3].classList.add('checked')
+          // path[3].classList.add('checked')
+          // e.path[0].classList.add('checked')
+          // item.classList.add('checked')
+        }
+      })
+    })
+
+    selectAll.addEventListener('click', (e) => {
+      if (selectAll.classList.contains('checked')) {
+        selectAll.classList.remove('checked')
+        items.forEach(item => {
+          item.classList.remove('checked')
+        })
+        checkboxes.forEach(item => {
+          item.classList.remove('checked')
+        })
+        // item.classList.remove('checked')
+      } else {
+        // e.path[3].classList.add('checked')
+        // e.path[0].classList.add('checked')
+        selectAll.classList.add('checked')
+        items.forEach(item => {
+          item.classList.add('checked')
+        })
+        checkboxes.forEach(item => {
+          item.classList.add('checked')
+        })
+        // item.classList.add('checked')
+      }
+    })
+  }
+}

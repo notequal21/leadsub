@@ -18,4 +18,11 @@
   &:hover {
     transform: scale(1.03);
   }
+
+  &_light {
+    background: #FFFFFF;
+    border: 1px solid #717171;
+    color: #222431;
+    box-shadow: none;
+  }
 }
