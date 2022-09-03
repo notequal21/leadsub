@@ -449,3 +449,167 @@ export const keywordsSelect = () => {
     })
   }
 }
+
+export const botlistMenuShow = () => {
+  if (document.querySelector('.botlist-item__menu-btn')) {
+    const scenMenuBtns = document.querySelectorAll('.botlist-item__menu-btn')
+    const scenMenuList = document.querySelectorAll('.botlist-item__menu')
+    scenMenuBtns.forEach(item => {
+      item.addEventListener('click', (event) => {
+
+        const ev = window.event || event;
+        const path = event.path || (event.composedPath && event.composedPath());
+
+        if (path[1].classList.contains('botlist-item__menu')) {
+          if (path[1].classList.contains('open')) {
+            path[1].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[1].classList.add('open')
+          }
+        }
+        if (path[2].classList.contains('botlist-item__menu')) {
+          if (path[2].classList.contains('open')) {
+            path[2].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[2].classList.add('open')
+          }
+        }
+        if (path[3].classList.contains('botlist-item__menu')) {
+          if (path[3].classList.contains('open')) {
+            path[3].classList.remove('open')
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+          } else {
+            scenMenuList.forEach(item => {
+              item.classList.remove('open')
+            })
+            path[3].classList.add('open')
+          }
+        }
+      })
+    })
+  }
+}
+
+export const botlistInfoShow = () => {
+  if (document.querySelector('.botlist-item')) {
+    const botlistContainer = document.querySelector('.botlist')
+    const infoBtns = document.querySelectorAll('.botlist-item')
+    const infoItem = document.querySelector('.botlist-info')
+    const btnClose = document.querySelector('.botlist-info__close')
+
+    const botname = document.querySelector('.info-botname')
+    const username = document.querySelector('.info-username')
+    const token = document.querySelector('.info-token')
+    const createday = document.querySelector('.info-createday')
+    const createtime = document.querySelector('.info-createtime')
+    const creategmt = document.querySelector('.info-creategmt')
+    const createplace = document.querySelector('.info-createplace')
+    const subscription = document.querySelector('.info-subscription')
+
+    infoBtns.forEach(item => {
+      item.addEventListener('click', (event) => {
+
+        // item.dataset.
+
+        const ev = window.event || event;
+        const path = event.path || (event.composedPath && event.composedPath());
+
+        if (event.target.classList.contains('botlist-item__menu-btn') || event.target.classList.contains('botlist-item__menu-item')) {
+          return
+        } else {
+          if (item.classList.contains('active')) {
+            item.classList.remove('active')
+            botlistContainer.classList.remove('open')
+            infoItem.classList.remove('open')
+          } else {
+            infoBtns.forEach(item => {
+              item.classList.remove('active')
+            })
+            item.classList.add('active')
+            botlistContainer.classList.add('open')
+            infoItem.classList.add('open')
+
+            botname.innerHTML = item.dataset.botname
+            username.innerHTML = item.dataset.username
+            token.innerHTML = item.dataset.token
+            createday.innerHTML = item.dataset.createday
+            createtime.innerHTML = item.dataset.createtime
+            creategmt.innerHTML = item.dataset.creategmt
+            createplace.innerHTML = item.dataset.createplace
+            subscription.innerHTML = item.dataset.subscription
+          }
+        }
+
+      })
+    })
+    btnClose.addEventListener('click', () => {
+      botlistContainer.classList.remove('open')
+      infoItem.classList.remove('open')
+      infoBtns.forEach(item => {
+        item.classList.remove('active')
+      })
+    })
+  }
+}
+
+export const addNewBotlistToken = () => {
+  if (document.querySelector('.addnew-botlist-token')) {
+    const scenAddNewBtns = document.querySelectorAll('.botlist-info__token-btn')
+    const scenAddNewBtnClose = document.querySelector('.addnew-botlist-token__cancel')
+    const addnew = document.querySelector('.addnew-botlist-token')
+    scenAddNewBtns.forEach(item => {
+      item.addEventListener('click', (event) => {
+        if (addnew.classList.contains('show')) {
+          addnew.classList.remove('show')
+        } else {
+          addnew.classList.add('show')
+        }
+      })
+    })
+    scenAddNewBtnClose.addEventListener('click', () => {
+      if (addnew.classList.contains('show')) {
+        addnew.classList.remove('show')
+      } else {
+        addnew.classList.add('show')
+      }
+    })
+  }
+}
+
+export const deleteBotlistToken = () => {
+  if (document.querySelector('.botlist-delete')) {
+    const scenAddNewBtns = document.querySelectorAll('.botlist-item__menu-item')
+    const scenAddNewBtnClose = document.querySelector('.botlist-delete__cancel')
+    const addnew = document.querySelector('.botlist-delete')
+    scenAddNewBtns.forEach(item => {
+      item.addEventListener('click', (event) => {
+        if (addnew.classList.contains('show')) {
+          addnew.classList.remove('show')
+        } else {
+          addnew.classList.add('show')
+        }
+      })
+    })
+    scenAddNewBtnClose.addEventListener('click', () => {
+      if (addnew.classList.contains('show')) {
+        addnew.classList.remove('show')
+      } else {
+        addnew.classList.add('show')
+      }
+    })
+  }
+}

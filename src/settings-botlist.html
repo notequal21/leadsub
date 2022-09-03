@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="content-main">
+        @@include('components/aside.html')
+        @@include('components/botlist-token-edit.html')
+        @@include('components/botlist-delete.html')
+
+        <main class="content-container">
+          <!-- @@include('components/header.html', {
+            'title': 'Конструктор',
+            'scen': 'active',
+            'keywords': '',
+          }) -->
+
+          <header class="header">
+            <div class="header__info">
+              <div class="header__title">
+                Настройки
+              </div>
+              <div class="header-links">
+                <div class="header-links__item @@scen">
+                  Список ботов
+                </div>
+              </div>
+            </div>
+            <button class="header__add btn">
+              Добавить бота
+            </button>
+          </header>
+
+          <div class="content-container__inner">
+            <div class="botlist">
+              <div class="botlist-header">
+                <div class="botlist__col">
+                  <span>
+                    Статус
+                  </span>
+                </div>
+                <div class="botlist__col">
+                  <span>
+                    Имя бота
+                  </span>
+                </div>
+                <div class="botlist__col">
+                  <span>
+                    Подписка
+                  </span>
+                </div>
+                <div class="botlist__col">
+                  <span>
+                    Аудитория
+                  </span>
+                </div>
+                <div class="botlist__col">
+                  <span>
+                    Дата создания
+                  </span>
+                </div>
+                <div class="botlist__col">
+                </div>
+              </div>
+              <div class="botlist-body">
+                <div class="botlist-item" data-botname="@LeadSub" data-username="@LeadSub_Bot"
+                  data-token="5115343469:AAF4-rjhZyfhbYoirnO6Wbdb1QcywUHSUfQ" data-createday="8 Апреля"
+                  data-createtime="13:04" data-creategmt="(GMT+03:00)" data-createplace="Europe/Moscow"
+                  data-subscription="10.05.1999">
+                  <div class="botlist__col">
+                    <div class="botlist-item__switcher switcher">
+                      <label>
+                        <input type="checkbox" name="" id="">
+                        <span class="fake"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__name">
+                      <span class="mobile">
+                        Имя бота
+                      </span>
+                      @LeadSub
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__subscription">
+                      <span class="mobile">
+                        Подписка
+                      </span>
+                      Нет подписки. <a href="">Активировать</a>
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__audience">
+                      <span class="mobile">
+                        Аудитория
+                      </span>
+                      0
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__date">
+                      <span class="mobile">
+                        Дата создания
+                      </span>
+                      13:04 08.04.2022
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__menu">
+                      <button class="botlist-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor" />
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor" />
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor" />
+                        </svg>
+                      </button>
+                      <div class="botlist-item__menu-list">
+                        <button class="botlist-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="botlist-item" data-botname="@LeadSubTest" data-username="@LeadSub_BotTest"
+                  data-token="Test5115343469:AAF4-rjhZyfhbYoirnO6Wbdb1QcywUHSUfQ" data-createday="12 Апреля"
+                  data-createtime="21:45" data-creategmt="(GMT+05:00)" data-createplace="Europe/Moscow"
+                  data-subscription="10.05.2001">
+                  <div class="botlist__col">
+                    <div class="botlist-item__switcher switcher">
+                      <label>
+                        <input type="checkbox" name="" id="">
+                        <span class="fake"></span>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__name">
+                      <span class="mobile">
+                        Имя бота
+                      </span>
+                      @LeadSub
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__subscription">
+                      <span class="mobile">
+                        Подписка
+                      </span>
+                      Активна до: 10.05.1999
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__audience">
+                      <span class="mobile">
+                        Аудитория
+                      </span>
+                      0
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__date">
+                      <span class="mobile">
+                        Дата создания
+                      </span>
+                      13:04 08.04.2022
+                    </div>
+                  </div>
+                  <div class="botlist__col">
+                    <div class="botlist-item__menu">
+                      <button class="botlist-item__menu-btn">
+                        <svg width="5" height="23" viewBox="0 0 5 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="2.5" cy="2.5" r="2.5" fill="currentColor" />
+                          <circle cx="2.5" cy="11.5" r="2.5" fill="currentColor" />
+                          <circle cx="2.5" cy="20.5" r="2.5" fill="currentColor" />
+                        </svg>
+                      </button>
+                      <div class="botlist-item__menu-list">
+                        <button class="botlist-item__menu-item">
+                          <img src="./img/icons/trash.svg" alt="">
+                          Удалить
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="botlist-info">
+                <button class="botlist-info__close">
+                  <img src="./img/icons/close.svg" alt="">
+                </button>
+                <div class="botlist-info__title">
+                  О боте
+                </div>
+                <div class="botlist-info__names">
+                  <div class="botlist-info__names-item">
+                    <span class="title">
+                      Название бота
+                    </span>
+                    <span class="name info-botname">
+                      @LeadSub
+                    </span>
+                  </div>
+                  <div class="botlist-info__names-item">
+                    <span class="title">
+                      Название бота
+                    </span>
+                    <a href="" class="name info-username">
+                      @LeadSub_Bot
+                    </a>
+                  </div>
+                </div>
+                <div class="botlist-info__token">
+                  <div class="botlist-info__token-title">
+                    Токен
+                  </div>
+                  <div class="botlist-info__token-item info-token">
+                    5115343469:AAF4-rjhZyfhbYoirnO6Wbdb1QcywUHSUfQ
+                  </div>
+                  <button class="botlist-info__token-btn btn">
+                    Обновить токен
+                  </button>
+                </div>
+                <div class="botlist-info__date">
+                  <div class="botlist-info__date-title">
+                    Дата Создания
+                  </div>
+                  <div class="botlist-info__date-item">
+                    <span class="day info-createday">
+                      8 Апреля
+                    </span>
+                    <span class="time info-createtime">
+                      13:04
+                    </span>
+                  </div>
+                  <div class="botlist-info__date-desc">
+                    <span class="gmt info-creategmt">
+                      (GMT+03:00)
+                    </span>
+                    <span class="place info-createplace">
+                      Europe/Moscow
+                    </span>
+                  </div>
+                </div>
+                <div class="botlist-info__subscription">
+                  <div class="botlist-info__subscription-title">
+                    Подписка
+                  </div>
+                  <div class="botlist-info__subscription-item">
+                    Активна до: <span class="info-subscription">10.05.1999</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>
