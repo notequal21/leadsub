@@ -206,7 +206,7 @@ export const dropdownMenu = () => {
 }
 
 export const actionsShow = () => {
-  if (document.querySelector('.dropdown-btn')) {
+  if (document.querySelector('.content-controlls__actions-btn')) {
     const actionsBtn = document.querySelector('.content-controlls__actions-btn')
     const actionsList = document.querySelector('.content-controlls__actions-list')
     actionsBtn.addEventListener('click', () => {
@@ -341,6 +341,29 @@ export const scenAddNew = () => {
   }
 }
 
+export const addNewKeyword = () => {
+  if (document.querySelector('.addnew-keyword')) {
+    const scenAddNewBtns = document.querySelectorAll('.addnew-keyword__btn')
+    const scenAddNewBtnClose = document.querySelector('.addnew-keyword__cancel')
+    const addnew = document.querySelector('.addnew-keyword')
+    scenAddNewBtns.forEach(item => {
+      item.addEventListener('click', () => {
+        if (addnew.classList.contains('show')) {
+          addnew.classList.remove('show')
+        } else {
+          addnew.classList.add('show')
+        }
+      })
+    })
+    scenAddNewBtnClose.addEventListener('click', () => {
+      if (addnew.classList.contains('show')) {
+        addnew.classList.remove('show')
+      } else {
+        addnew.classList.add('show')
+      }
+    })
+  }
+}
 
 export const selectItem = () => {
   if (document.querySelector('.scenarious-item')) {
@@ -349,40 +372,13 @@ export const selectItem = () => {
     const selectAll = document.querySelector('.content-controlls__all')
     checkboxes.forEach(item => {
       item.addEventListener('click', (event) => {
-
-        // if (!("path" in Event.prototype))
-        //   Object.defineProperty(Event.prototype, "path", {
-        //     get: function () {
-        //       var path = [];
-        //       var currentElem = this.target;
-        //       while (currentElem) {
-        //         path.push(currentElem);
-        //         currentElem = currentElem.parentElement;
-        //       }
-        //       if (path.indexOf(window) === -1 && path.indexOf(document) === -1)
-        //         path.push(document);
-        //       if (path.indexOf(window) === -1)
-        //         path.push(window);
-        //       return path;
-        //     }
-        //   });
-
-        // console.log(e);
-
         const ev = window.event || event;
         const path = event.path || (event.composedPath && event.composedPath());
 
         if (path[3].classList.contains('checked')) {
           path[3].classList.remove('checked')
-          // if (path[3].classList.contains('checked')) {
-          // path[3].classList.remove('checked')
-          // e.path[0].classList.remove('checked')
-          // item.classList.remove('checked')
         } else {
           path[3].classList.add('checked')
-          // path[3].classList.add('checked')
-          // e.path[0].classList.add('checked')
-          // item.classList.add('checked')
         }
       })
     })
@@ -409,6 +405,47 @@ export const selectItem = () => {
         })
         // item.classList.add('checked')
       }
+    })
+  }
+}
+
+export const keywordsMenuShow = () => {
+  if (document.querySelector('.keywords-item__words-contains')) {
+    const keywordsMenuBtn = document.querySelectorAll('.keywords-item__words-btn')
+    const keywordsMenuItem = document.querySelectorAll('.keywords-item__words-contains')
+
+    keywordsMenuBtn.forEach(item => {
+      item.addEventListener('click', (event) => {
+        const ev = window.event || event;
+        const path = event.path || (event.composedPath && event.composedPath());
+        console.log(path);
+        if (path[1].classList.contains('open')) {
+          path[1].classList.remove('open')
+        } else {
+          path[1].classList.add('open')
+        }
+      })
+    })
+  }
+}
+
+export const keywordsSelect = () => {
+  if (document.querySelector('.modalselect')) {
+    const selectBtns = document.querySelectorAll('.keywords-item__send-botname')
+    const selectMenu = document.querySelector('.modalselect')
+    const selectClose = document.querySelector('.modalselect-body__close')
+
+    selectBtns.forEach(item => {
+      item.addEventListener('click', () => {
+        if (selectMenu.classList.contains('show')) {
+          selectMenu.classList.remove('show')
+        } else {
+          selectMenu.classList.add('show')
+        }
+      })
+    })
+    selectClose.addEventListener('click', () => {
+      selectMenu.classList.remove('show')
     })
   }
 }

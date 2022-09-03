@@ -1,25 +1,5 @@
 .addnew {
-  position: fixed;
-  z-index: 100;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  display: none;
-
-  &.show {
-    display: block;
-  }
-
-  &__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(225.4deg, rgba(5, 104, 255, 0.7) 25.17%, rgba(49, 160, 253, 0.5) 91.46%);
-  }
+  &__bg {}
 }
 
 .addnew-body {
@@ -66,9 +46,5 @@
     color: #222431;
   }
 
-  &__btns-btn {
-    // background: transparent;
-  }
+  &__btns-btn {}
 }
-
-.btn {}

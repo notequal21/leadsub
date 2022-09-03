@@ -47,6 +47,26 @@
       }
     }
 
+    .aside-profile__arrow {
+      display: none;
+    }
+
+    .profile-list__item-name {
+      display: none;
+    }
+
+    .profile-manager__new {
+      padding: 0;
+    }
+
+    .profile-manager__new-ico {
+      padding: 0 1.285rem;
+    }
+
+    .profile-manager__new-text {
+      display: none;
+    }
+
     .aside-menu {
       &__item {
         font-size: 0;
@@ -187,22 +207,38 @@
 
     position: relative;
 
-    &::after {
-      content: url(../img/icons/arrow-blue.svg);
+    // &::after {
+    &__arrow {
+      // content: url(../img/icons/arrow-blue.svg);
       position: absolute;
       right: 1.428rem;
       transition: all .3s ease;
 
-      opacity: 0;
-      pointer-events: none;
-      visibility: hidden;
+      svg {
+        transition: all .3s ease;
+        transform: rotate(180deg);
+        color: #717171;
+        transition: all .3s ease;
+      }
+
+      // opacity: 0;
+      // pointer-events: none;
+      // visibility: hidden;
     }
 
     &.active {
-      &::after {
-        opacity: 1;
-        pointer-events: all;
-        visibility: visible;
+      // &::after {
+      //   content: url(../img/icons/arrow-blue.svg);
+      //   opacity: 1;
+      //   pointer-events: all;
+      //   visibility: visible;
+      // }
+
+      .aside-profile__arrow {
+        svg {
+          transform: rotate(0deg);
+          color: #1C85FE;
+        }
       }
     }
 
@@ -260,6 +296,7 @@
         width: 100%;
         margin: 1.1428rem 0 0;
         font-size: 1rem;
+        font-weight: 500;
         line-height: 1.2142rem;
         letter-spacing: 0.03rem;
         color: #222431;

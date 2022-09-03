@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  @@include('components/keyword-addnew.html')
+
+  <div class="wrapper">
+    <div class="content">
+      <div class="content-main">
+        @@include('components/aside.html')
+        @@include('components/keywords-select.html')
+
+        <main class="content-container">
+          <!-- @@include('components/header.html', {
+            'title': 'Конструктор',
+            'scen': '',
+            'keywords': 'active',
+          }) -->
+
+          <header class="header">
+            <div class="header__info">
+              <div class="header__title">
+                Конструктор
+              </div>
+              <div class="header-links">
+                <a href="" class="header-links__item @@scen">
+                  Сценарии
+                </a>
+                <a href="" class="header-links__item @@keywords">
+                  Ключевые слова
+                </a>
+              </div>
+            </div>
+            <button class="header__add addnew-keyword__btn btn">
+              + Ключевое слово
+            </button>
+          </header>
+
+          <div class="content-container__inner">
+
+            <div class="keywords">
+              <div class="keywords-body">
+                <div class="keywords-item">
+
+                  <div class="keywords-item__switcher">
+                    <label>
+                      <input type="checkbox" name="" id="">
+                      <span class="fake"></span>
+                    </label>
+                  </div>
+                  
+                  <div class="keywords-item__content">
+                    <div class="keywords-item__words">
+                      <div class="keywords-item__words-contains">
+                        <button class="keywords-item__words-btn">
+                          сообщение содержит
+                        </button>
+                        <div class="keywords-item__words-list">
+                          <button class="keywords-item__words-item">
+                            сообщение полностью совпадает с
+                          </button>
+                          <button class="keywords-item__words-item active">
+                            сообщение содержит
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение содержит слово целиком
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение начинается с
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение палец - вверх
+                          </button>
+                        </div>
+                      </div>
+                      <span>
+                        Ключ
+                      </span>
+                    </div>
+                    <button class="keywords-item__content-add addnew-keyword__btn btn btn_dashed">
+                      + Ключевое слово
+                    </button>
+                  </div>
+
+                  <div class="keywords-item__send">
+                    <div class="keywords-item__send-btn">
+                      Отправить в
+                    </div>
+                    <button class="keywords-item__send-botname">
+                      <!-- <span class="circle"></span> -->
+                      <span class="name">Test_Bot</span>
+                    </button>
+                  </div>
+
+                  <button class="keywords-item__delete">
+                    <img src="./img/icons/trash.svg" alt="">
+                  </button>
+
+                </div>
+                <div class="keywords-item">
+
+                  <div class="keywords-item__switcher">
+                    <label>
+                      <input type="checkbox" name="" id="">
+                      <span class="fake"></span>
+                    </label>
+                  </div>
+                  
+                  <div class="keywords-item__content">
+                    <div class="keywords-item__words">
+                      <div class="keywords-item__words-contains">
+                        <button class="keywords-item__words-btn">
+                          сообщение содержит
+                        </button>
+                        <div class="keywords-item__words-list">
+                          <button class="keywords-item__words-item">
+                            сообщение полностью совпадает с
+                          </button>
+                          <button class="keywords-item__words-item active">
+                            сообщение содержит
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение содержит слово целиком
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение начинается с
+                          </button>
+                          <button class="keywords-item__words-item">
+                            сообщение палец - вверх
+                          </button>
+                        </div>
+                      </div>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                      <span>
+                        Дорого
+                      </span>
+                    </div>
+                    <button class="keywords-item__content-add addnew-keyword__btn btn btn_dashed">
+                      + Ключевое слово
+                    </button>
+                  </div>
+
+                  <div class="keywords-item__send">
+                    <div class="keywords-item__send-btn">
+                      Отправить в
+                    </div>
+                    <button class="keywords-item__send-botname">
+                      <span class="name">Test_Bot</span>
+                    </button>
+                  </div>
+
+                  <button class="keywords-item__delete">
+                    <img src="./img/icons/trash.svg" alt="">
+                  </button>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

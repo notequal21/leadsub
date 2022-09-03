@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.min.css?_v=20220901192750">
+  <link rel="stylesheet" href="css/style.min.css?_v=20220902224430">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <title>name</title>
 </head>
@@ -29,6 +29,11 @@
     </div>
     <div class="aside-profile__name">
       Pdl
+    </div>
+    <div class="aside-profile__arrow">
+      <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5.17522 0.463904C5.56578 -0.154635 6.43422 -0.154635 6.82478 0.463904L11.835 8.3987C12.2685 9.08523 11.7973 10 11.0102 10H0.989794C0.20269 10 -0.268478 9.08523 0.165014 8.3987L5.17522 0.463904Z" fill="currentColor"/>
+        </svg>        
     </div>
   </button>
   <div class="aside-menu">
@@ -143,8 +148,8 @@
     </a>
   </div>
 </aside>
-        <div class="addnew">
-  <div class="addnew__bg"></div>
+        <div class="addnew modal">
+  <div class="addnew__bg modal__bg"></div>
   <div class="addnew-body">
     <div class="addnew-body__title">
       Создать новый сценарий
@@ -162,27 +167,30 @@
 </div>
 
         <main class="content-container">
+          
+
           <header class="header">
-	<div class="header__info">
-		<div class="header__title">
-			Конструктор
-		</div>
-		<div class="header-links">
-			<a href="" class="header-links__item active">
-				Сценарии
-			</a>
-			<a href="" class="header-links__item">
-				Ключевые слова
-			</a>
-		</div>
-	</div>
-	<div class="header__search">
-		<input type="text" placeholder="Поиск сценария">
-	</div>
-	<button class="header__add btn">
-		Новый сценарий
-	</button>
-</header>
+            <div class="header__info">
+              <div class="header__title">
+                Конструктор
+              </div>
+              <div class="header-links">
+                <a href="" class="header-links__item @@scen">
+                  Сценарии
+                </a>
+                <a href="" class="header-links__item @@keywords">
+                  Ключевые слова
+                </a>
+              </div>
+            </div>
+            <div class="header__search">
+              <input type="text" placeholder="Поиск сценария">
+            </div>
+            <button class="header__add btn">
+              Новый сценарий
+            </button>
+          </header>
+
           <div class="content-container__inner">
             <div class="content-controlls">
               <div class="content-controlls__all">
@@ -381,8 +389,8 @@
     </div>
   </div>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js?_v=20220901192750" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
-<script src="js/app.min.js?_v=20220901192750"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js?_v=20220902224430" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script> -->
+<script src="js/app.min.js?_v=20220902224430"></script>
 
 </body>
 

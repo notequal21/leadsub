@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zxx">
+@@include('components/_head.html', {
+'title':'name',
+})
+
+<body>
+
+  <div class="wrapper">
+      <div class="login">
+        <form class="login-form">
+          <div class="login-form__main">
+            <label>
+              <span>Имя пользователя</span>
+              <input type="text" class="login-input" placeholder="Введите имя">
+            </label>
+            <label>
+              <span>E-mail адрес</span>
+              <input type="text" class="login-input" placeholder="Введите E-mail">
+            </label>
+            <label>
+              <span>Пароль</span>
+              <input type="text" class="login-input" placeholder="Введите пароль">
+            </label>
+            <label>
+              <span>Подтверждение пароля</span>
+              <input type="text" class="login-input" placeholder="Повторите пароль">
+            </label>
+          </div>
+          <div class="login-form__bottom">
+            <div class="login-form__bottom-btns">
+              <button class="login-form__bottom-login btn">
+                Регистрация
+              </button>
+              <a href="" class="login-form__bottom-back">
+                уже есть аккаунт
+              </a>
+            </div>
+          </div>
+        </form>
+
+    </div>
+  </div>
+
+  @@include('components/_js.html')
+
+</body>
+
+</html>

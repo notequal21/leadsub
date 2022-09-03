@@ -7,15 +7,15 @@
 			<a href="" class="header-links__item @@scen">
 				Сценарии
 			</a>
-			<a href="" class="header-links__item">
+			<a href="" class="header-links__item @@keywords">
 				Ключевые слова
 			</a>
 		</div>
 	</div>
-	<div class="header__search">
-		<input type="text" placeholder="Поиск сценария">
-	</div>
-	<button class="header__add btn">
-		Новый сценарий
-	</button>
+	@@if (keywords === 'active') {
+		@@include(addkeyword.html)
+	} 
+	@@if (scen === 'active') {
+		@@include(search.html)
+	}
 </header>

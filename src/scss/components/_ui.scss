@@ -25,4 +25,54 @@
     color: #222431;
     box-shadow: none;
   }
+
+  &_dashed {
+    border: 1px dashed #1C85FE;
+    background: transparent;
+    color: #1C85FE;
+    box-shadow: none;
+  }
+}
+
+.modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+
+  &.show {
+    display: block;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(225.4deg, rgba(5, 104, 255, 0.7) 25.17%, rgba(49, 160, 253, 0.5) 91.46%);
+  }
+}
+
+.login-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: #FAFAFC;
+  border: 1px solid #E2E3ED;
+  border-radius: .85rem;
+  font-weight: 400;
+  font-size: .85rem;
+  line-height: 188.7%;
+  color: #000;
+  height: 4.14rem;
+  padding: 0 1.42rem;
+
+  &::placeholder {
+    color: #72768F;
+  }
 }

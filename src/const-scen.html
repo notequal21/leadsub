@@ -13,10 +13,34 @@
         @@include('components/scen-addnew.html')
 
         <main class="content-container">
-          @@include('components/header.html', {
-            title: 'Конструктор',
-            scen: 'active'
-          })
+          <!-- @@include('components/header.html', {
+            'title': 'Конструктор',
+            'scen': 'active',
+            'keywords': '',
+          }) -->
+
+          <header class="header">
+            <div class="header__info">
+              <div class="header__title">
+                Конструктор
+              </div>
+              <div class="header-links">
+                <a href="" class="header-links__item @@scen">
+                  Сценарии
+                </a>
+                <a href="" class="header-links__item @@keywords">
+                  Ключевые слова
+                </a>
+              </div>
+            </div>
+            <div class="header__search">
+              <input type="text" placeholder="Поиск сценария">
+            </div>
+            <button class="header__add btn">
+              Новый сценарий
+            </button>
+          </header>
+
           <div class="content-container__inner">
             <div class="content-controlls">
               <div class="content-controlls__all">
